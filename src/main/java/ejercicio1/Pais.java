@@ -1,6 +1,6 @@
 package ejercicio1;
 
-public class Pais {
+public class Pais implements Comparable<Pais>{
 
     private String nombre;
 
@@ -30,5 +30,10 @@ public class Pais {
     @Override
     public String toString() {
         return nombre;
+    }
+
+    @Override
+    public int compareTo(Pais o) {
+        return nombre.compareToIgnoreCase(o.nombre);
     }
 }
